@@ -2331,12 +2331,12 @@
     if (true) {
       (function() {
         "use strict";
-        var React2 = require_react();
+        var React3 = require_react();
         var _assign = require_object_assign();
         var Scheduler = require_scheduler();
         var checkPropTypes = require_checkPropTypes();
         var tracing = require_tracing();
-        var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React3.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         if (!ReactSharedInternals.hasOwnProperty("ReactCurrentDispatcher")) {
           ReactSharedInternals.ReactCurrentDispatcher = {
             current: null
@@ -2389,7 +2389,7 @@
             }
           }
         }
-        if (!React2) {
+        if (!React3) {
           {
             throw Error("ReactDOM was loaded before React. Make sure you load the React package before loading ReactDOM.");
           }
@@ -3734,7 +3734,7 @@
         var didWarnInvalidChild = false;
         function flattenChildren(children) {
           var content = "";
-          React2.Children.forEach(children, function(child) {
+          React3.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -3745,7 +3745,7 @@
         function validateProps(element, props) {
           {
             if (typeof props.children === "object" && props.children !== null) {
-              React2.Children.forEach(props.children, function(child) {
+              React3.Children.forEach(props.children, function(child) {
                 if (child == null) {
                   return;
                 }
@@ -10779,7 +10779,7 @@
         }
         var fakeInternalInstance = {};
         var isArray = Array.isArray;
-        var emptyRefsObject = new React2.Component().refs;
+        var emptyRefsObject = new React3.Component().refs;
         var didWarnAboutStateAssignmentForComponent;
         var didWarnAboutUninitializedState;
         var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -19325,17 +19325,26 @@ For more info, visit https://fb.me/react-mock-scheduler`);
     }
   });
 
+  // src/components/Welcome.js
+
   // src/App.js
-  const React = __toModule(require_react());
+  const React2 = __toModule(require_react());
   const ReactDOM = __toModule(require_react_dom());
-  ReactDOM.render(React.createElement("div", {
+  ReactDOM.render(React2.createElement("div", {
     className: "App"
-  }, React.createElement("header", {
+  }, React2.createElement("header", {
     className: "App-header"
-  }, React.createElement("img", {
+  }, React2.createElement("img", {
     src: "/logo.svg",
     className: "App-logo",
     alt: "logo"
-  }), React.createElement("h3", null, "Anton's Website"), React.createElement("p", null))), document.getElementById("root"));
+  }), React2.createElement("h3", null, "Anton's Website"), React2.createElement("h4", null, "My favorite songs"), React2.createElement("iframe", {
+    width: "560",
+    height: "315",
+    src: "https://www.youtube-nocookie.com/embed/8Uynb-CyTUk",
+    frameborder: "0",
+    allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+    allowfullscreen: true
+  }))), document.getElementById("root"));
 })();
 //# sourceMappingURL=bundle.js.map
